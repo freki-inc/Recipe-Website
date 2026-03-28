@@ -4,7 +4,7 @@
   font-family: 'Outfit';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/outfit-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/outfit-v14-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-600 - latin */
@@ -13,7 +13,7 @@
   font-family: 'Outfit';
   font-style: normal;
   font-weight: 600;
-  src: url('/assets/fonts/outfit-v14-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/outfit-v14-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* outfit-700 - latin */
@@ -22,7 +22,7 @@
   font-family: 'Outfit';
   font-style: normal;
   font-weight: 700;
-  src: url('/assets/fonts/outfit-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/outfit-v14-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 
@@ -32,7 +32,7 @@
   font-family: 'Young Serif';
   font-style: normal;
   font-weight: 400;
-  src: url('/assets/fonts/young-serif-v2-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('./assets/fonts/young-serif-v2-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* Color Variables */
@@ -94,7 +94,6 @@ h2 {
     font-size: 1.5rem;
     font-weight: 500;
     color: var(--fontcolor-h2);
-    /* margin-bottom: 0; */
 }
 
 p {
@@ -163,13 +162,18 @@ td {
 
 img {
     border-radius: 0.5rem;
+}
 
-    @media (width <= 35rem) {
+@media (width <= 35rem) {
+    img {
         padding: 0;
         border-radius: 0;
         margin: 0;
     }
-    @media (width >= 35rem) {
+}
+
+@media (width >= 35rem) {
+    img {
         max-width: var(--l-max-width);
         border-radius: 0.7rem;
     }
@@ -180,8 +184,10 @@ img {
     display: grid;
     place-items: center;
     padding: 6rem;
+}
 
-    @media (width <= 35rem) {
+@media (width <= 35rem) {
+    .wrapper {
         padding: 0;
     }
 }
@@ -190,8 +196,10 @@ img {
     background-color: var(--color-background-recipe);
     border-radius: 1.2rem;
     padding: 1.8rem;
+}
 
-    @media (width <= 35rem) {
+@media (width <= 35rem) {
+    .wrapper-recipe {
         padding: 0;
         border-radius: 0;
     }
@@ -200,8 +208,10 @@ img {
 .recipe {
     max-width: var(--l-max-width);
     padding: var(--l-padding);
+}
 
-    @media (width <= 840px) {
+@media (width <= 840px) {
+    .recipe {
         padding: var(--l-padding-mobile);
     }
 }
