@@ -251,3 +251,7 @@ img {
 .line {
     border-bottom: solid 1px var(--c-stone150);
 }
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
